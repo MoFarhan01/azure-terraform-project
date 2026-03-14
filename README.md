@@ -1,3 +1,22 @@
+## Architecture
+
+The Terraform configuration provisions Azure networking infrastructure inside a resource group.
+
+```
+Azure Resource Group
+│
+├── Virtual Network (demo-vnet)
+│    └── Subnet (demo-subnet)
+│
+├── Network Security Group (demo-nsg)
+│    └── SSH Security Rule
+│
+└── Public IP Address (demo-public-ip)
+```
+
+Terraform state is stored remotely in Azure Blob Storage to support consistent deployments and team collaboration.
+
+
 # Azure Infrastructure Deployment with Terraform
 
 This project demonstrates Infrastructure as Code (IaC) by provisioning Azure networking infrastructure using Terraform.
